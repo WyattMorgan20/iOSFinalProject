@@ -9,13 +9,22 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var startingMeasurmentInputOL: UITextField!
+    
+    @IBOutlet weak var startingMeasurmentDisplayOL: UILabel!
+    
+    @IBOutlet weak var convertedMeasurementOutputOL: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func convertBTNPressed(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
