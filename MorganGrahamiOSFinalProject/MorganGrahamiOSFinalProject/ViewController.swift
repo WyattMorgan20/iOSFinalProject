@@ -30,6 +30,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var fromPicker: [String] = [String]()
     var toPicker: [String] = [String]()
+    var valueSelectedFrom = ""
+    var valueSelectedTo = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +69,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
+        
+        valueSelectedFrom = fromPicker[pickerView.selectedRow(inComponent: 0)]
+        valueSelectedTo = toPicker[pickerView.selectedRow(inComponent: 0)]
+        
     }
 
 
