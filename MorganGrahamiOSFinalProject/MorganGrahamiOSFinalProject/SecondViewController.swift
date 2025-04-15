@@ -34,8 +34,11 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
      
         // Connect data:
-        self.picker.delegate = self
-        self.picker.dataSource = self
+        self.convertFromPV.delegate = self
+        self.convertFromPV.dataSource = self
+     
+        self.convertToPV.delegate = self
+        self.convertToPV.delegate = self
         
         // Input the data into the arrays
         fromPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
