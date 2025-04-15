@@ -14,7 +14,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return fromPicker.count; toPicker.count
+        if pickerView == convertToPV{
+            return fromPicker.count
+        }
+        else if pickerView == convertFromPV{
+            return toPicker.count
+        }
+        return 0
     }
     
 
@@ -26,28 +32,35 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var toPicker: [String] = [String]()
     
     override func viewDidLoad() {
-       super.viewDidLoad()
-    
-       // Connect data:
+        super.viewDidLoad()
+        
+        // Connect data:
         self.convertToPV.delegate = self
         self.convertToPV.dataSource = self
         
         self.convertFromPV.delegate = self
         self.convertFromPV.dataSource = self
-       
-       // Input the data into the arrays
-       fromPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
-       
-       toPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
+        
+        // Input the data into the arrays
+        fromPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
+        
+        toPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
+    }
     
-    func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // The data to return fopr the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return fromPicker[row]; toPicker[row]
+        if pickerView == convertToPV {
+            return toPicker[row]
+        }
+        else if pickerView == convertFromPV {
+            return fromPicker[row]
+        }
+        return ""
     }
     
     // Capture the picker view selection
@@ -55,7 +68,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
     }
-}
+
 
     @IBAction func placeHolderBTN(_ sender: UIButton) {
         
