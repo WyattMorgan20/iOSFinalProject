@@ -131,8 +131,8 @@ class SecondViewController: UIViewController {
 //        }
         
         
-        startingMeasurmentDisplayOL.text = startingMeasurmentDisplayOL.text! + String(current)
-        convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(converted)
+        startingMeasurmentDisplayOL.text = startingMeasurmentDisplayOL.text! + String(current) + " " + selectedFrom
+        convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(converted) + " " + selectedTo
         
     }
     

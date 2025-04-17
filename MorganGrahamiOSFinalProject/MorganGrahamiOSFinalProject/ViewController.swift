@@ -74,7 +74,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     // Capture the picker view selection
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
         
@@ -191,7 +191,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var transition = segue.identifier
-        if transition == "resultSegue" {
+        if transition == "secondVCSegue" {
             var destination = segue.destination as! SecondViewController
             
             destination.current = Double(inputOL.text!)!
