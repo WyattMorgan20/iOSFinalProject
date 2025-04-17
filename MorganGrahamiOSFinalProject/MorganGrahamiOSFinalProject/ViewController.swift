@@ -202,7 +202,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if transition == "secondVCSegue" {
             var destination = segue.destination as! SecondViewController
             
-            destination.current = Double(inputOL.text!)!
+            destination.current = current
+            destination.converted = converted
             destination.selectedFrom = valueSelectedFrom
             destination.selectedTo = valueSelectedTo
         }
