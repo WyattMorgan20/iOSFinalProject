@@ -29,9 +29,6 @@ class SecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        startingMeasurmentDisplayOL.text = startingMeasurmentDisplayOL.text! + String(current)
-        convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(converted)
-        
         if selectedFrom == "miles" {
             miles = current
             kilometers = 1.6
@@ -72,7 +69,70 @@ class SecondViewController: UIViewController {
                 converted = kilometers * centimeters
             }
         }
+        else if selectedFrom == "feet" {
+            feet = current
+            kilometers = 0.000189394
+            miles = 0.000000568182
+            inches = 12
+            centimeters = 30.48
+            
+            if selectedTo == "miles" {
+                converted = feet * miles
+            }
+            else if selectedTo == "kilometers" {
+                converted = feet * kilometers
+            }
+            else if selectedTo == "inches" {
+                converted = feet * inches
+            }
+            else if selectedTo == "centimeters" {
+                converted = feet * centimeters
+            }
+        }
+        else if selectedFrom == "inches" {
+            inches = current
+            kilometers = 0.0000254
+            miles = 0.0000000833333
+            feet = 0.0833333
+            centimeters = 2.54
+            
+            if selectedTo == "miles" {
+                converted = inches * miles
+            }
+            else if selectedTo == "kilometers" {
+                converted = inches * kilometers
+            }
+            else if selectedTo == "feet" {
+                converted = inches * feet
+            }
+            else if selectedTo == "centimeters" {
+                converted = inches * centimeters
+            }
+        }
+        else if selectedFrom == "centimeters" {
+            centimeters = current
+            kilometers = 0.000001
+            miles = 0.000000000621371
+            feet = 0.00328084
+            inches = 0.393701
+            
+            if selectedTo == "miles" {
+                converted = centimeters * miles
+            }
+            else if selectedTo == "kilometers" {
+                converted = centimeters * kilometers
+            }
+            else if selectedTo == "feet" {
+                converted = centimeters * feet
+            }
+            else if selectedTo == "inches" {
+                converted = centimeters * inches
+            }
+        }
         
+        
+        startingMeasurmentDisplayOL.text = startingMeasurmentDisplayOL.text! + String(current)
+        convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(converted)
         
     }
     
