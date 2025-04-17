@@ -32,6 +32,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var toPicker: [String] = [String]()
     var valueSelectedFrom = ""
     var valueSelectedTo = ""
+    var current = 0.0
+    var converted = 0.0
+    
+    var miles = 0.0
+    var kilometers = 0.0
+    var feet = 0.0
+    var inches = 0.0
+    var centimeters = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +85,108 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
 
     @IBAction func placeHolderBTN(_ sender: UIButton) {
+        current = Double(inputOL.text!)!
         
+        if valueSelectedFrom == "miles" {
+            miles = current
+            kilometers = 1.6
+            feet = 5280
+            inches = 63360
+            centimeters = 160934.4
+            
+            if valueSelectedTo == "kilometers" {
+                converted = miles * kilometers
+            }
+            else if valueSelectedTo == "feet" {
+                converted = miles * feet
+            }
+            else if valueSelectedTo == "inches" {
+                converted = miles * inches
+            }
+            else if valueSelectedTo == "centimeters" {
+                converted = miles * centimeters
+            }
+        }
+        else if valueSelectedFrom == "kilometers" {
+            kilometers = current
+            miles = 0.6
+            feet = 3280.8
+            inches = 40467.2
+            centimeters = 100000
+            
+            if valueSelectedTo == "miles" {
+                converted = kilometers * miles
+            }
+            else if valueSelectedTo == "feet" {
+                converted = kilometers * feet
+            }
+            else if valueSelectedTo == "inches" {
+                converted = kilometers * inches
+            }
+            else if valueSelectedTo == "centimeters" {
+                converted = kilometers * centimeters
+            }
+        }
+        else if valueSelectedFrom == "feet" {
+            feet = current
+            kilometers = 0.000189394
+            miles = 0.000000568182
+            inches = 12
+            centimeters = 30.48
+            
+            if valueSelectedTo == "miles" {
+                converted = feet * miles
+            }
+            else if valueSelectedTo == "kilometers" {
+                converted = feet * kilometers
+            }
+            else if valueSelectedTo == "inches" {
+                converted = feet * inches
+            }
+            else if valueSelectedTo == "centimeters" {
+                converted = feet * centimeters
+            }
+        }
+        else if valueSelectedFrom == "inches" {
+            inches = current
+            kilometers = 0.0000254
+            miles = 0.0000000833333
+            feet = 0.0833333
+            centimeters = 2.54
+            
+            if valueSelectedTo == "miles" {
+                converted = inches * miles
+            }
+            else if valueSelectedTo == "kilometers" {
+                converted = inches * kilometers
+            }
+            else if valueSelectedTo == "feet" {
+                converted = inches * feet
+            }
+            else if valueSelectedTo == "centimeters" {
+                converted = inches * centimeters
+            }
+        }
+        else if valueSelectedFrom == "centimeters" {
+            centimeters = current
+            kilometers = 0.000001
+            miles = 0.000000000621371
+            feet = 0.00328084
+            inches = 0.393701
+            
+            if valueSelectedTo == "miles" {
+                converted = centimeters * miles
+            }
+            else if valueSelectedTo == "kilometers" {
+                converted = centimeters * kilometers
+            }
+            else if valueSelectedTo == "feet" {
+                converted = centimeters * feet
+            }
+            else if valueSelectedTo == "inches" {
+                converted = centimeters * inches
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
