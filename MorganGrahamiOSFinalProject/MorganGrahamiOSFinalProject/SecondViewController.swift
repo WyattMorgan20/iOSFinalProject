@@ -13,15 +13,28 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var convertedMeasurementOutputOL: UILabel!
     
+    var selectedFrom = ""
+    var selectedTo = ""
     var current = 0.0
     var converted = 0.0
+    
+    var miles = 0.0
+    var kilometers = 0.0
+    var feet = 0.0
+    var inches = 0.0
+    var centimeters = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        startingMeasurmentDisplayOL.text = startingMeasurmentDisplayOL.text! + String(current)
+        convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(converted)
         
+        if selectedFrom == "miles" {
+            
+        }
         
     }
     
