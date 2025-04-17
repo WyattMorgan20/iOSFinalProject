@@ -195,6 +195,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 converted = Centimeters * Inches
             }
         }
+        
+//        ✅ Fix:
+//        Option 1: Manually trigger the segue after the values are updated
+//
+//        If your segue is set in storyboard (via button dragging to next view controller), change it to manual and trigger it in code like this:
+//
+//        Remove the storyboard segue from the button.
+//        Assign it an identifier, like "secondVCSegue"
+//        Add this to your button action, at the end of placeHolderBTN:
+//        self.performSegue(withIdentifier: "secondVCSegue", sender: self)
+//        This ensures the segue only happens after current and converted have been updated.
+        
+        self.performSegue(withIdentifier: "secondVCSegue", sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
