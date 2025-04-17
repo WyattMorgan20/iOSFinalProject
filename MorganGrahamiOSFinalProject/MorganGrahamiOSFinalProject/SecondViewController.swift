@@ -33,8 +33,46 @@ class SecondViewController: UIViewController {
         convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(converted)
         
         if selectedFrom == "miles" {
+            miles = current
+            kilometers = 1.6
+            feet = 5280
+            inches = 63360
+            centimeters = 160934.4
             
+            if selectedTo == "kilometers" {
+                converted = miles * kilometers
+            }
+            else if selectedTo == "feet" {
+                converted = miles * feet
+            }
+            else if selectedTo == "inches" {
+                converted = miles * inches
+            }
+            else if selectedTo == "centimeters" {
+                converted = miles * centimeters
+            }
         }
+        else if selectedFrom == "kilometers" {
+            kilometers = current
+            miles = 0.6
+            feet = 3280.8
+            inches = 40467.2
+            centimeters = 100000
+            
+            if selectedTo == "miles" {
+                converted = kilometers * miles
+            }
+            else if selectedTo == "feet" {
+                converted = kilometers * feet
+            }
+            else if selectedTo == "inches" {
+                converted = kilometers * inches
+            }
+            else if selectedTo == "centimeters" {
+                converted = kilometers * centimeters
+            }
+        }
+        
         
     }
     
