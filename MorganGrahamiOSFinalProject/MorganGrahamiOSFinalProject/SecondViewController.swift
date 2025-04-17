@@ -15,8 +15,8 @@ class SecondViewController: UIViewController {
     
     var selectedFrom = ""
     var selectedTo = ""
-    var current = 0.0
-    var converted = 0.0
+    var currentOut = 0.0
+    var convertedOut = 0.0
     
     var miles = 0.0
     var kilometers = 0.0
@@ -27,9 +27,9 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startingMeasurmentDisplayOL.text = startingMeasurmentDisplayOL.text! + String(current) + " " + selectedFrom
+        startingMeasurmentDisplayOL.text = startingMeasurmentDisplayOL.text! + String(currentOut) + " " + selectedFrom
         
-        convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(converted) + " " + selectedTo
+        convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(convertedOut) + " " + selectedTo
         
     }
     
