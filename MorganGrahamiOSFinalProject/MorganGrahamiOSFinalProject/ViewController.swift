@@ -55,6 +55,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         fromPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
         
         toPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
+        
+        valueSelectedFrom = fromPicker[0]
+        valueSelectedTo = toPicker[0]
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,8 +82,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
         
-        valueSelectedFrom = fromPicker[pickerView.selectedRow(inComponent: 0)]
-        valueSelectedTo = toPicker[pickerView.selectedRow(inComponent: 0)]
+        if pickerView == convertFromPV {
+            valueSelectedFrom = fromPicker[row]
+        }
+        else if pickerView == convertToPV {
+            valueSelectedTo = toPicker[row]
+        }
         
     }
 
