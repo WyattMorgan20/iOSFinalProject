@@ -35,11 +35,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var current = 0.0
     var converted = 0.0
     
-    var miles = 0.0
-    var kilometers = 0.0
-    var feet = 0.0
-    var inches = 0.0
-    var centimeters = 0.0
+    var Miles = 0.0
+    var Kilometers = 0.0
+    var Feet = 0.0
+    var Inches = 0.0
+    var Centimeters = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,104 +87,104 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func placeHolderBTN(_ sender: UIButton) {
         current = Double(inputOL.text!)!
         
-        if valueSelectedFrom == "miles" {
-            miles = current
-            kilometers = 1.6
-            feet = 5280
-            inches = 63360
-            centimeters = 160934.4
+        if valueSelectedFrom == "Miles" {
+            Miles = current
+            Kilometers = 1.6
+            Feet = 5280
+            Inches = 63360
+            Centimeters = 160934.4
             
-            if valueSelectedTo == "kilometers" {
-                converted = miles * kilometers
+            if valueSelectedTo == "Kilometers" {
+                converted = Miles * Kilometers
             }
-            else if valueSelectedTo == "feet" {
-                converted = miles * feet
+            else if valueSelectedTo == "Feet" {
+                converted = Miles * Feet
             }
-            else if valueSelectedTo == "inches" {
-                converted = miles * inches
+            else if valueSelectedTo == "Inches" {
+                converted = Miles * Inches
             }
-            else if valueSelectedTo == "centimeters" {
-                converted = miles * centimeters
+            else if valueSelectedTo == "Centimeters" {
+                converted = Miles * Centimeters
             }
         }
-        else if valueSelectedFrom == "kilometers" {
-            kilometers = current
-            miles = 0.6
-            feet = 3280.8
-            inches = 40467.2
-            centimeters = 100000
+        else if valueSelectedFrom == "Kilometers" {
+            Kilometers = current
+            Miles = 0.6
+            Feet = 3280.8
+            Inches = 40467.2
+            Centimeters = 100000
             
-            if valueSelectedTo == "miles" {
-                converted = kilometers * miles
+            if valueSelectedTo == "Miles" {
+                converted = Kilometers * Miles
             }
-            else if valueSelectedTo == "feet" {
-                converted = kilometers * feet
+            else if valueSelectedTo == "Feet" {
+                converted = Kilometers * Feet
             }
-            else if valueSelectedTo == "inches" {
-                converted = kilometers * inches
+            else if valueSelectedTo == "Inches" {
+                converted = Kilometers * Inches
             }
-            else if valueSelectedTo == "centimeters" {
-                converted = kilometers * centimeters
+            else if valueSelectedTo == "Centimeters" {
+                converted = Kilometers * Centimeters
             }
         }
-        else if valueSelectedFrom == "feet" {
-            feet = current
-            kilometers = 0.000189394
-            miles = 0.000000568182
-            inches = 12
-            centimeters = 30.48
+        else if valueSelectedFrom == "Feet" {
+            Feet = current
+            Kilometers = 0.000189394
+            Miles = 0.000000568182
+            Inches = 12
+            Centimeters = 30.48
             
-            if valueSelectedTo == "miles" {
-                converted = feet * miles
+            if valueSelectedTo == "Miles" {
+                converted = Feet * Miles
             }
-            else if valueSelectedTo == "kilometers" {
-                converted = feet * kilometers
+            else if valueSelectedTo == "Kilometers" {
+                converted = Feet * Kilometers
             }
-            else if valueSelectedTo == "inches" {
-                converted = feet * inches
+            else if valueSelectedTo == "Inches" {
+                converted = Feet * Inches
             }
-            else if valueSelectedTo == "centimeters" {
-                converted = feet * centimeters
+            else if valueSelectedTo == "Centimeters" {
+                converted = Feet * Centimeters
             }
         }
-        else if valueSelectedFrom == "inches" {
-            inches = current
-            kilometers = 0.0000254
-            miles = 0.0000000833333
-            feet = 0.0833333
-            centimeters = 2.54
+        else if valueSelectedFrom == "Inches" {
+            Inches = current
+            Kilometers = 0.0000254
+            Miles = 0.0000000833333
+            Feet = 0.0833333
+            Centimeters = 2.54
             
-            if valueSelectedTo == "miles" {
-                converted = inches * miles
+            if valueSelectedTo == "Miles" {
+                converted = Inches * Miles
             }
-            else if valueSelectedTo == "kilometers" {
-                converted = inches * kilometers
+            else if valueSelectedTo == "Kilometers" {
+                converted = Inches * Kilometers
             }
-            else if valueSelectedTo == "feet" {
-                converted = inches * feet
+            else if valueSelectedTo == "Feet" {
+                converted = Inches * Feet
             }
-            else if valueSelectedTo == "centimeters" {
-                converted = inches * centimeters
+            else if valueSelectedTo == "Centimeters" {
+                converted = Inches * Centimeters
             }
         }
-        else if valueSelectedFrom == "centimeters" {
-            centimeters = current
-            kilometers = 0.000001
-            miles = 0.000000000621371
-            feet = 0.00328084
-            inches = 0.393701
+        else if valueSelectedFrom == "Centimeters" {
+            Centimeters = current
+            Kilometers = 0.000001
+            Miles = 0.000000000621371
+            Feet = 0.00328084
+            Inches = 0.393701
             
-            if valueSelectedTo == "miles" {
-                converted = centimeters * miles
+            if valueSelectedTo == "Miles" {
+                converted = Centimeters * Miles
             }
-            else if valueSelectedTo == "kilometers" {
-                converted = centimeters * kilometers
+            else if valueSelectedTo == "Kilometers" {
+                converted = Centimeters * Kilometers
             }
-            else if valueSelectedTo == "feet" {
-                converted = centimeters * feet
+            else if valueSelectedTo == "Feet" {
+                converted = Centimeters * Feet
             }
-            else if valueSelectedTo == "inches" {
-                converted = centimeters * inches
+            else if valueSelectedTo == "Inches" {
+                converted = Centimeters * Inches
             }
         }
     }
