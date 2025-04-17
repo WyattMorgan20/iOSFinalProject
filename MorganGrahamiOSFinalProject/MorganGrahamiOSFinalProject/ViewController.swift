@@ -79,5 +79,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func placeHolderBTN(_ sender: UIButton) {
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var transition = segue.identifier
+        if transition == "resultSegue" {
+            var destination = segue.destination as! SecondViewController
+            
+            destination.current = Double(inputOL.text!)!
+            destination.selectedFrom = valueSelectedFrom
+            destination.selectedTo = valueSelectedTo
+        }
+    }
 }
 
