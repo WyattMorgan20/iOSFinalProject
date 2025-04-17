@@ -32,55 +32,6 @@ class SecondViewController: UIViewController {
         convertedMeasurementOutputOL.text = convertedMeasurementOutputOL.text! + String(convertedOut) + " " + selectedTo
         
     }
-    
-    /*
-     demo pickerview code:
-     var fromPicker: [String] = [String]()
-     var toPicker: [String] = [String]()
-     
-     override func viewDidLoad() {
-        super.viewDidLoad()
-     
-        // Connect data:
-        self.convertFromPV.delegate = self
-        self.convertFromPV.dataSource = self
-     
-        self.convertToPV.delegate = self
-        self.convertToPV.delegate = self
-        
-        // Input the data into the arrays
-        fromPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
-        
-        toPicker = ["Miles", "Kilometers", "Feet", "Inches", "Centimeters"]
-     
-     override func didReceiveMemoryWarning() {
-         super.didReceiveMemoryWarning()
-         // Dispose of any resources that can be recreated.
-     }
-
-     // Number of columns of data
-     func numberOfComponents(in pickerView: UIPickerView) -&gt; Int {
-         return 1
-     }
-     
-     // The number of rows of data
-     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -&gt; Int {
-         return fromPicker.count, toPicker.count
-     }
-     
-     // The data to return fopr the row and component (column) that's being passed in
-     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -&gt; String? {
-         return fromPicker[row], toPicker[row]
-     }
-     
-     // Capture the picker view selection
-     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-         // This method is triggered whenever the user makes a change to the picker selection.
-         // The parameter named row and component represents what was selected.
-     }
- ...
-     }
-     */
 
     
     /*
