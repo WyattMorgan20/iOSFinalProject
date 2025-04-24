@@ -26,7 +26,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Convert"/>
                                 <connections>
                                     <action selector="placeHolderBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nze-OQ-dA7"/>
-                                    <segue destination="SHH-gK-wur" kind="show" identifier="secondVCSegue" id="ZvZ-d3-8EH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xC9-0c-HFe">
@@ -73,11 +72,12 @@
                         <outlet property="convertFromPV" destination="wIb-PC-6xb" id="sic-2S-QwM"/>
                         <outlet property="convertToPV" destination="tne-Hb-IOP" id="h40-Kl-0Ps"/>
                         <outlet property="inputOL" destination="0UE-bN-3wp" id="LL3-11-i3l"/>
+                        <segue destination="SHH-gK-wur" kind="show" identifier="secondVCSegue" id="hQ1-3d-y27"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1092" y="4"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="l0g-gD-f74">

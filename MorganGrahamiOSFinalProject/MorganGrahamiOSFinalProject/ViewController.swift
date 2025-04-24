@@ -194,6 +194,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             else if valueSelectedTo == "Inches" {
                 converted = Centimeters * Inches
             }
+            
+            self.performSegue(withIdentifier: "secondVCSegue", sender: self)
         }
         
 //        ✅ Fix:
@@ -208,6 +210,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 //        This ensures the segue only happens after current and converted have been updated.
         
         self.performSegue(withIdentifier: "secondVCSegue", sender: self)
+        
         
     }
     
